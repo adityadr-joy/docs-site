@@ -102,12 +102,12 @@ The App Server can be accessed over HTTP and/or HTTPS, provided it has been conf
 
 ### HTTP
 To configure the server for HTTP, define an attribute *http* within the top-level *node* attribute. Then, define the following within *http*:
-- *ipAddresses*: An array of strings of ipv4, ipv6, or hostnames that the server will bind to. If not specified, the default is 0.0.0.0
+- *ipAddresses*: An array of strings of ipv4, ipv6, or hostnames that the server will bind to. If ipAddresses not specified, the assigned value is ZOWE_IP_ADDRESS. If both not specified, the default is 0.0.0.0
 - *port*: An integer parameter for the TCP port that the server will listen on. Can be 80 or a value between 1024-65535.
 
 ### HTTPS
 For HTTPS, a few parameters are required. First, define an attribute *https* within the top-level *node* attribute. Then, define the following within *https*:
-- *ipAddresses*: An array of strings of ipv4, ipv6, or hostnames that the server will bind to. If not specified, the default is 0.0.0.0
+- *ipAddresses*: An array of strings of ipv4, ipv6, or hostnames that the server will bind to. If ipAddresses not specified, the assigned value is ZOWE_IP_ADDRESS. If both not specified, the default is 0.0.0.0
 - *port*: An integer parameter for the TCP port that the server will listen on. Can be 443 or a value between 1024-65535.
 - *certificates*: An array of strings which are paths to PEM format HTTPS certificate files.
 - *keys*: An array of strings which are paths to PEM format HTTPS key files.
